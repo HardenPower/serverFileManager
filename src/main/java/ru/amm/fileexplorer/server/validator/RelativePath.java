@@ -11,7 +11,7 @@ import java.lang.annotation.*;
 public @interface RelativePath {
     String message() default "invalid path";
 
-    Class<?>[] groups() default {};
+    Class<?>[] groups() default {}; //
 
     Class<? extends Payload>[] payload() default {};
 }

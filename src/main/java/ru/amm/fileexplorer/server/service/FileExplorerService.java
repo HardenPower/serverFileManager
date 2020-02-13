@@ -71,7 +71,8 @@ public class FileExplorerService {
 
     private List<ParentFolder> getParentFolders(String relativePath) {
         LinkedList<ParentFolder> parents = new LinkedList<>();
-        Path path = Path.of(relativePath);
+        Path path;
+        path = Path.of(relativePath);
 
         while (path != null && path.getNameCount() > 0) {
             parents.addFirst(new ParentFolder(path.getFileName().toString(),
